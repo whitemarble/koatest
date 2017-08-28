@@ -25,4 +25,5 @@ app.use(async ctx => {
   ctx.body = 'Hello World';
 });
 
-app.listen(80);
+const port = process.env.PORT || 443
+app.listen(port, () => console.log('Server listening on', port))
