@@ -1,6 +1,7 @@
 {
     "name": "koa-test",
     "version": "0.1",
+    "engines":{"node": "8.4.0"}, 
     "dependencies": {
         "koa": "^2.3.0"
     }
