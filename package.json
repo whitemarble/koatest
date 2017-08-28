@@ -1,4 +1,6 @@
 {
+    "name": "koa-test",
+    "version": "0.1",
     "dependencies": {
         "koa": "^2.3.0"
     }
