@@ -1,7 +1,10 @@
 {
     "name": "koa-test",
-    "engines":{"node": "8.4.0"}, 
+    "engines": {
+        "node": "8.4.0"
+    },
     "dependencies": {
-        "koa": "^2.3.0"
+        "koa": "^2.3.0",
+        "koa-router": "^7.2.1"
     }
 }
