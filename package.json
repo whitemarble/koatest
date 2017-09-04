@@ -4,7 +4,10 @@
         "node": "8.4.0"
     },
     "dependencies": {
+        "jsonwebtoken": "^7.4.3",
         "koa": "^2.3.0",
+        "koa-bodyparser": "^4.2.0",
+        "koa-jwt": "^3.2.2",
         "koa-router": "^7.2.1"
     }
 }

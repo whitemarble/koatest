@@ -1,8 +1,11 @@
-const Koa = require('koa')
+const Koa = require('koa');
 const fs = require('fs')
 const app = new Koa()
 const router = require('./routers/index')
+const bodyParser = require('koa-bodyparser');
 
+
+app.use(bodyParser());
 app.use(router.routes()).use(router.allowedMethods())
 
 
