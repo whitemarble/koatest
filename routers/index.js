@@ -15,11 +15,11 @@ const authenticate = require('../middlewares/authenticate');
 const jwtO = require("jsonwebtoken");
 
 router.get('/customer', (ctx,next)=> {
-    let token = ctx.request.headers['authorization'];
-    token = token.replace('bearer ', '')
-    console.log(token)
-    let uuuu = jwtO.verify(token, 'A very secret key');
-    console.log(uuuu)
+    //let token = ctx.request.headers['authorization'];
+    //token = token.replace('bearer ', '')
+    //console.log(token)
+    //let uuuu = jwtO.verify(token, 'A very secret key');
+    //console.log(uuuu)
     ctx.body = customerService.getCustomers();
 });
 
