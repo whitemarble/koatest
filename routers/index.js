@@ -37,8 +37,8 @@ router.post('/customer', jwt,(ctx,next) =>{
     ctx.body = customerService.postCustomer(ctx.request.body);
 });
 
-router.post('/login', (ctx,next) =>{
-    authenticate(ctx);
+router.post('/login', async (ctx,next) =>{
+    await authenticate(ctx);
 });
 
 

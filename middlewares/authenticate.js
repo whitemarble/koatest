@@ -1,7 +1,17 @@
 const jwt = require('jsonwebtoken');
+const {pool}  = require('../async-db')
+
+async function selectUser(username){
+  let sql = 'SELECT * FROM `wp_users` WHERE `user_login` = ?';
+  let dataList = await pool.query(sql,[username]);
+  return dataList;
+}
 
 
-module.exports = function (ctx) {
+module.exports = async (ctx) =>{
+  let data = await selectUser('admin');
+  console.log(data[0].user_pass)
+  
     if (ctx.request.body.password === 'password') {
       ctx.status = 200;
       ctx.body = {
